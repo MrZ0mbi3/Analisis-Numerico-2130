@@ -8,7 +8,10 @@ import numpy as np
 import math
 
 def f(x):
-    return np.longdouble(math.cos(x)*math.cos(x) - x**2)
+    #return np.longdouble(math.cos(x)*math.cos(x) - x**2)
+    #return math.e**x-x-1
+    #return x**3 -2*x**2 + (4/3)*x-(8/27)
+    #return x**3- 2*x-5
 
 
 def metodoSteffesen(p0,tol):
@@ -34,4 +37,4 @@ def metodoSteffesen(p0,tol):
     return "No se encontro raiz"
     
 
-print(metodoSteffesen(0,10**-53))
+print(metodoSteffesen(0.6666,10**-53))
