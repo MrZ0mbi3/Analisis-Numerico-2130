@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 """
+Created on Wed Aug 11 21:26:53 2021
+
 @author: samyf
 """
 import numpy as np
@@ -17,6 +19,7 @@ def f(x):
     return (667.38/x)*(1-math.e**(-0.146843*x))-40
 
 #Para utilizar la funcion del metodo de Aitken solo se debe dar un punto y la tolerancia que se va a tener
+#se utiliza la tolerancia cuando hay una division por cero para evitar este problema ya que la tolerancia es lo minimo que puede tener como resultado
 def metodoAitken(p0,tol):
     formato="{:."+str(tol).split('-')[1]+"f}"
 
@@ -55,3 +58,16 @@ for i in range(1, 3):
         raices.add(resultado)
     
 print (raices)
+"""
+plt.plot(y,x)
+plt.show()
+
+print(metodoAitken(0.66667,10**-8))
+
+for i in tolerancia:
+    print(i)
+    print(metodoAitken(0.5,i))
+    
+plt.plot(iteraciones,tolerancia)
+plt.show()
+"""
