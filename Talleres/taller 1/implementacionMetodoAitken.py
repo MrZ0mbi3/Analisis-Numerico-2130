@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Wed Aug 11 21:26:53 2021
-
-@author: samyf
-"""
 import numpy as np
 import math
 from matplotlib import pyplot as plt
@@ -58,16 +53,3 @@ for i in range(1, 3):
         raices.add(resultado)
     
 print (raices)
-"""
-plt.plot(y,x)
-plt.show()
-
-print(metodoAitken(0.66667,10**-8))
-
-for i in tolerancia:
-    print(i)
-    print(metodoAitken(0.5,i))
-    
-plt.plot(iteraciones,tolerancia)
-plt.show()
-"""
