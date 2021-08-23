@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Wed Aug  4 08:01:45 2021
-
-@author: juank
-"""
 
 from  math import *
 import numpy as np
@@ -14,6 +9,10 @@ import sympy
 def mostrarGrafica():
     x = np.arange(2*(-pi), 2*(pi), 0.1)
     y=np.cos(x)* np.cos(x) - x**2;
+    # np.longdouble(math.e**x-x-1)
+    # x**3 -2*x**2 + (4/3)*x-(8/27)
+    # x**3- 2*x-5
+    #(667.38/x)*(1-math.e**(-0.146843*x))-40
     plt.plot(x,y)
     plt.show()
     
@@ -41,8 +40,11 @@ def biseccion(a, b, tolerancia):
 #%%
 def funcion(x):
     return np.cos(x)* np.cos(x) - x**2;
+    #return np.longdouble(np.e**x-x-1)
+    #return x**3 -2*x**2 + (4/3)*x-(8/27)
+    #return x**3- 2*x-5
+    #return (667.38/x)*(1-math.e**(-0.146843*x))-40
 
-##x*np.cos(x**2)+1
 
 #%%
 mostrarGrafica();
