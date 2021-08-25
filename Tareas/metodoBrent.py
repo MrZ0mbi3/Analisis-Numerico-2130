@@ -34,7 +34,7 @@ def metodoBrent(intervalo,digitos):
         print( "Iteraciones",solu1.iterations )
         print("\n segunda forma de usar metodo de brent")
         solu2=sc.brentq(f,intervalo[0],intervalo[1])
-        print(solu2)
+        print(formato.format(solu2))
         
 
 for b in ndigitos:
