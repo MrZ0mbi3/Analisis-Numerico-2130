@@ -1,13 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Sun Sep 19 14:41:54 2021
 
-@author: samyf
-"""
-
-# -*- coding: utf-8 -*-
- 
-# Método iterativo Jacobbi Matriz de coeficientes de entrada mx, matriz de valores mr, número de iteración n, error c (la matriz de lista es la preferida por la matriz de simulación de lista)
 import numpy as np
 def Jacobi(A,b,vInit,n):
    D=[]
@@ -56,7 +48,7 @@ def Jacobi(A,b,vInit,n):
 
        
    for a in range(n+1):
-       print("solucion ",a,":", solucionAnterior)
+       print("iteracion ",a,":", solucionAnterior)
        for i in range (len(Db)):
            valor=Db[i]
            #print(valor)
@@ -84,5 +76,5 @@ def Jacobi(A,b,vInit,n):
 
 matriz=[[2,0,-1],[0,2,-1],[-1,1,3]]
 b=[1,2,1]
-valoresIniciales=[0,0,0]
+valoresIniciales=[1,2,3]
 Jacobi(matriz,b, valoresIniciales, 10)
