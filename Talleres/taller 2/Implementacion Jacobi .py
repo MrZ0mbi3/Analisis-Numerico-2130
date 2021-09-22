@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import numpy as np
+from scipy import linalg
 def Jacobi(A,b,vInit,n):
    D=[]
    L=[]
@@ -45,8 +46,7 @@ def Jacobi(A,b,vInit,n):
    #Se realizan la formulas
    solucionActual=[]
    solucionAnterior=vInit
-
-       
+   print("Respuesta usando implementacion de jacobi")
    for a in range(n+1):
        print("iteracion ",a,":", solucionAnterior)
        for i in range (len(Db)):
@@ -75,6 +75,9 @@ def Jacobi(A,b,vInit,n):
        
 
 matriz=[[2,0,-1],[0,2,-1],[-1,1,3]]
-b=[1,2,1]
+b=[1,2,1]#respuestas de las funciones
 valoresIniciales=[1,2,3]
 Jacobi(matriz,b, valoresIniciales, 10)
+
+print("Respuesta usando biblioteca  scipy")
+print(linalg.solve(matriz, b))
